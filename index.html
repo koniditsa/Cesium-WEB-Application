@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Cesium App</title>
+
+    <!-- Cesium CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cesium.com/downloads/cesiumjs/releases/1.113/Build/Cesium/Widgets/widgets.css"
+    />
+
+    <style>
+      html, body, #cesiumContainer {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      /* optional: center loading text if your JS adds it */
+      #loadingOverlay { position:absolute; top:0; left:0; right:0; bottom:0;
+        display:flex; align-items:center; justify-content:center; pointer-events:none; }
+    </style>
+  </head>
+  <body>
+    <div id="cesiumContainer"></div>
+    <div id="loadingOverlay"><h1></h1></div>
+    <div id="toolbar"></div>
+
+    <!-- Cesium JS -->
+    <script src="https://cesium.com/downloads/cesiumjs/releases/1.113/Build/Cesium/Cesium.js"></script>
+
+    <!-- Your app code (module because it uses top-level await) -->
+    <script type="module" src="cesium_java.js"></script>
+  </body>
+</html>
